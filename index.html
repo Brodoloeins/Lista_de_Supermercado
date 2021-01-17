@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de supermercado</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Helvetica;
+        }
+
+        html, body{
+            height: 100%;
+        }
+
+        header{
+            background-color:#5a71bb;
+            text-align: center;
+            color: white;
+            padding: 20px 0;
+        }
+
+        .lista{
+            display: flex;
+            margin: 20px 0;
+            padding: 0 20px;
+            margin-top: 2%;
+        }
+
+        .lista input[type=text]{
+            flex: 1;
+            height: 40px;
+            padding-left: 20px;
+        }
+
+        .produto-single{
+            padding: 10px 0;
+            margin: 20px 0;
+            border-bottom: 1px solid #ccc;
+            display: flex;
+        }
+
+        .produto-single h3{
+            flex: 1;
+            padding: 0 20px;
+        }
+
+        h3.price-produto{
+            text-align: right;
+            font-size: 16px;
+        }
+
+        h3.price-produto>span{
+            background-color: #5a71bb;
+            padding: 8px 10px;
+            border-radius: 20px;
+            color: white;
+        }
+
+        .soma-produto{
+            margin: 20px;
+            margin-top: 2%;
+        }
+
+        button{
+            background-color: #5a71bb;
+            border: 0;
+            margin-top: 1%;
+            margin-left: 10%;
+            width: 80%;
+            height: 60px;
+            font-size: 30px;
+            cursor: pointer;
+            color: white;
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        <h2>App Lista de Supermercado</h2>
+    </header>
+    <div class="lista">
+                <input type="text" placeholder="nome do produto" name="nome_produto" required="true">
+                <input type="number" placeholder="valor do produto" name="valor_produto" required="true">
+                <input type="submit" name="acao" value="Cadastrar" class="cadastrar">
+    </div>
+
+    <div class="lista-produtos">
+
+    </div>
+
+    <div class="soma-produto">
+        <h1>Total: R$ 0,00</h1>
+    </div>
+    
+    <button name="limpar"> Limpar </button>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
